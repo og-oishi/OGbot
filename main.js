@@ -46,11 +46,6 @@ for (const file of eventsFiles) {
   console.log(`-> [Loaded Event] ${file.split('.')[0]}`);
 }
 
-// Bot準備完了
-client.on(Events.ClientReady, readyClient => {
-  console.log(`${readyClient.user.tag} でログインしました！`);
-});
-
 client.on(Events.InteractionCreate, async interaction => {
 	if (!interaction.isChatInputCommand()) return;
 
