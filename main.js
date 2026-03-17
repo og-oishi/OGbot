@@ -60,7 +60,7 @@ client.on(Events.InteractionCreate, async interaction => {
 		await command.execute(client,interaction);
 	} catch (error) {
 		console.error(error);
-		await interaction.reply({ content: 'コマンドがありません', ephemeral: true });
+		await interaction.reply({ content: 'コマンドがありません', flags: MessageFlags.Ephemeral });
 	}
 });
 
